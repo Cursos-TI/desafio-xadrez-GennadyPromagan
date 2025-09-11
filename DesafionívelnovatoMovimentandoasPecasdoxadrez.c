@@ -4,7 +4,7 @@ int main (){
 
     int rainha = 0;
     int bispo = 0;
-    int opcao;
+    int opcao, opcao2;
     
 
 // Torre movendo a Direita
@@ -21,6 +21,47 @@ int main (){
         printf("Rainha para a esquerda\n");
         rainha++;
     }
+
+// Cavalo
+
+    printf("---- Cavalo ----\n");
+    printf("1. Cima, Cima e Direita\n");
+    printf("2. Cima, Cima e Esquerda\n");
+    printf("Escolha o Movimento do Cavalo: ");
+    scanf("%d", &opcao2);
+
+    switch(opcao2){
+        case 1:
+            printf("Duas casas para cima, uma casa para Direita\n");
+            for(int i = 0; i < 2; i++){
+            printf("Cima\n");
+
+            for(int j = 0; j < i; j++){
+            printf("Direita\n");
+        }
+        break;
+
+        case 2:
+            printf("Duas casas para cima, uma casa para Esquerda\n");
+
+            for(int i = 0; i < 2; i++){
+            printf("Cima\n");
+
+          int j = 0;
+
+            while(j < 1 && i == 1){
+            printf("Esquerda\n");
+
+            j++;
+        }
+    }
+        break;
+    default:
+        printf("Opcao invalida\n");
+    break;
+    }
+
+}
 
 // Escolher para onde o bispo se move
 
